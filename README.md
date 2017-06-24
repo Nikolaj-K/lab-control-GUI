@@ -1,7 +1,7 @@
 # Virtual Instrument Panel
 Authored by Nikolaj Kuntner
 
-7. June 2017
+Created on 7. June 2017
 
 ![VIP_screenshot_nikolaj_170401](http://i.imgur.com/EewrmiC.jpg)
 ![banner_fingroup_webpage](http://i.imgur.com/iyG61IK.jpg)
@@ -32,10 +32,9 @@ routines and thus fairly idiosyncratic.
 ## Overview
 ```
 VIP
-├── (main.py)               <─── execute that file to start the VIP
-├── README.md                  <─── this file
+├── main.py                    <─── execute that file to start the VIP
 └── VIP_modules
-    ├── (VIP_Qwidget.py)       <─── VIP class definition
+    ├── VIP_Qwidget.py         <─── VIP class definition
     ├── widgets                <─── smaller class definitions
     ├── dictionaries           <─── contains settings (session.py, constants.py,...)
     ├── configurations
@@ -50,15 +49,14 @@ The primary external Python software package imported and used in the code is
 [PyQt4](https://wiki.python.org/moin/PyQt4),
 the Python binding to the
 [Qt GUI software](https://en.wikipedia.org/wiki/Qt_(software)).
-It is used in the *main.py* file, as well as the *interface* folders and
-many of the PyQt4 widgets.
-Note that unless you want to play with fonts and the Qt widgets, a large screen
-will help.
-(As a side note, the VIP Panel GUI must be opened in a Qt-Application that only
-lets the terminal/editor come back once the VIP-GUI is closed.
-A decorator that does exactly that is implemented as a wrapper function for the
-main function.
-It is found in *QtGui_decorator.py* the *scripts_for_main folder*.)
+An IDE which helps you with the installation might be an advantage here.
+Also note that unless you want to play with fonts and the Qt widgets, a large screen will help.
+PyQt4 is used in the *main.py* file, as well as the *interface* folders and
+many of the PyQt4 widgets. Note that in the present code we import widgets from two packages, PyQt4 and PySide. You may want to replace all instances of "PySide" for "PyQt4".
+
+As a side note, the VIP Panel GUI must be opened in a Qt-Application that only lets the terminal/editor come back once the VIP-GUI is closed.
+A decorator that does exactly that is implemented as a wrapper function for the main function.
+It is found in *QtGui_decorator.py* the *scripts_for_main folder*.
 
 Another important package is the
 [PyVisa](https://pyvisa.readthedocs.io/en/stable/)
